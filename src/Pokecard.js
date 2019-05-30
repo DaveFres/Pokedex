@@ -13,10 +13,14 @@ class Pokecard extends React.Component {
             <div className="Pokecard">
                 <h1 className="Pokecard-title">{name}</h1>
 
-                <img src={`${POKE_API}${padToThree(id)}.png`} alt="pokemon" />
-
+                <div className="Pokecard-image">
+                    <img src={`${POKE_API}${padToThree(id)}.png`} alt="pokemon" />                
+                </div>
+                
                 <div className="Pokecard-data">type : {type}</div>
                 <div className="Pokecard-data">EXP : {exp}</div>
+            
+                
             </div>
         );
     }
