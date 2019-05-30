@@ -3,18 +3,17 @@ import "./Pokecard.css";
 
 class Pokecard extends React.Component {
     render() {
-        const { id, name, type, base_experience } = this.props;
+        const { id, name, type, exp } = this.props;
         return (
             <div className="Pokecard">
-                <h1>{name}</h1>
+                <h1 className="Pokecard-title">{name}</h1>
                 <img
                     src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`}
                     alt="pokemon"
                 />
-                <div>
-                    <p>type : {type}</p>
-                    <p>EXP : {base_experience}</p>
-                </div>
+
+                <div className="Pokecard-data">type : {type}</div>
+                <div className="Pokecard-data">EXP : {exp}</div>
             </div>
         );
     }
